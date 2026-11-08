@@ -138,50 +138,50 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
 
 | 檔案 | 說明 |
 |---|---|
-| `Rayleigh_Rician_pdf.m` | 由兩路高斯隨機變數產生 envelope，比較 Rayleigh / Rician 的模擬 histogram 與理論 PDF |
-| `BpskBer.m` | BPSK 在 AWGN、Rayleigh（三種寫法）、Rician 下的 BER |
-| `RayTracing.m` | 室內射線追蹤，LOS + 1～3 次反射，估計路徑損耗斜率 |
+| [`Rayleigh_Rician_pdf.m`](MobileCommunication/Rayleigh_Rician_pdf.m) | 由兩路高斯隨機變數產生 envelope，比較 Rayleigh / Rician 的模擬 histogram 與理論 PDF |
+| [`BpskBer.m`](MobileCommunication/BpskBer.m) | BPSK 在 AWGN、Rayleigh（三種寫法）、Rician 下的 BER |
+| [`RayTracing.m`](MobileCommunication/RayTracing.m) | 室內射線追蹤，LOS + 1～3 次反射，估計路徑損耗斜率 |
 
 ### [NexGenMobileCom/](NexGenMobileCom/)
 
 | 檔案 | 說明 |
 |---|---|
-| `conv_filter_1.m` | 訊號與系統複習：弦波通過理想 LPF 的時域摺積與頻域表示 |
-| `conv_filter_2.m` | 訊號與系統複習：三角脈衝通過理想 LPF |
-| `M_PSK_VectorChannel.m` | BPSK / QPSK / 8PSK / 16PSK 的 BER（向量通道，用 `pskmod` + `awgn`） |
-| `M_PSK_WaveformChannel.m` | 同上，改用波形通道（passband 波形 + 手刻 correlator） |
-| `precoding.m` | ISI 通道：無等化 / DFE / precoder |
-| `ISI_channel.m` | 同上，再加上 OFDM |
-| `MIMO.m` | SISO / MISO / SIMO / Alamouti BER |
-| `Spatial_Mod.m` | ZF / MMSE / V-BLAST / 空間調變 BER |
-| `rx_beamformer_beamPattern.m` | Delay-and-Sum / MMSE / MVDR 波束場型 |
-| `rx_beamformer_MSE.m` | Delay-and-Sum / MMSE / MVDR 的 MSE vs. SNR |
-| `DOA_standardMUSIC_pseudoSpectrum.m` | MUSIC pseudo-spectrum |
-| `DOA_standardMUSIC_MSE.m` | MUSIC 的 MSE vs. SNR（M = 10、15、20） |
-| `DOA_rootMUSIC_root.m` | Root-MUSIC 的根在複數平面上的分布 |
-| `DOA_rootMUSIC_MSE.m` | Root-MUSIC 的 MSE vs. SNR（M = 10、15） |
-| `ESPRIT.m` | ESPRIT 單次估計 |
-| `ESPRIT_MSE.m` | ESPRIT 的 MSE vs. SNR（M = 10、15） |
-| `DOA_compare_MSE.m` | MUSIC / Root-MUSIC / ESPRIT 用同一組資料比較 MSE vs. SNR（M = 10、15） |
+| [`conv_filter_1.m`](NexGenMobileCom/conv_filter_1.m) | 訊號與系統複習：弦波通過理想 LPF 的時域摺積與頻域表示 |
+| [`conv_filter_2.m`](NexGenMobileCom/conv_filter_2.m) | 訊號與系統複習：三角脈衝通過理想 LPF |
+| [`M_PSK_VectorChannel.m`](NexGenMobileCom/M_PSK_VectorChannel.m) | BPSK / QPSK / 8PSK / 16PSK 的 BER（向量通道，用 `pskmod` + `awgn`） |
+| [`M_PSK_WaveformChannel.m`](NexGenMobileCom/M_PSK_WaveformChannel.m) | 同上，改用波形通道（passband 波形 + 手刻 correlator） |
+| [`precoding.m`](NexGenMobileCom/precoding.m) | ISI 通道：無等化 / DFE / precoder |
+| [`ISI_channel.m`](NexGenMobileCom/ISI_channel.m) | 同上，再加上 OFDM |
+| [`MIMO.m`](NexGenMobileCom/MIMO.m) | SISO / MISO / SIMO / Alamouti BER |
+| [`Spatial_Mod.m`](NexGenMobileCom/Spatial_Mod.m) | ZF / MMSE / V-BLAST / 空間調變 BER |
+| [`rx_beamformer_beamPattern.m`](NexGenMobileCom/rx_beamformer_beamPattern.m) | Delay-and-Sum / MMSE / MVDR 波束場型 |
+| [`rx_beamformer_MSE.m`](NexGenMobileCom/rx_beamformer_MSE.m) | Delay-and-Sum / MMSE / MVDR 的 MSE vs. SNR |
+| [`DOA_standardMUSIC_pseudoSpectrum.m`](NexGenMobileCom/DOA_standardMUSIC_pseudoSpectrum.m) | MUSIC pseudo-spectrum |
+| [`DOA_standardMUSIC_MSE.m`](NexGenMobileCom/DOA_standardMUSIC_MSE.m) | MUSIC 的 MSE vs. SNR（M = 10、15、20） |
+| [`DOA_rootMUSIC_root.m`](NexGenMobileCom/DOA_rootMUSIC_root.m) | Root-MUSIC 的根在複數平面上的分布 |
+| [`DOA_rootMUSIC_MSE.m`](NexGenMobileCom/DOA_rootMUSIC_MSE.m) | Root-MUSIC 的 MSE vs. SNR（M = 10、15） |
+| [`ESPRIT.m`](NexGenMobileCom/ESPRIT.m) | ESPRIT 單次估計 |
+| [`ESPRIT_MSE.m`](NexGenMobileCom/ESPRIT_MSE.m) | ESPRIT 的 MSE vs. SNR（M = 10、15） |
+| [`DOA_compare_MSE.m`](NexGenMobileCom/DOA_compare_MSE.m) | MUSIC / Root-MUSIC / ESPRIT 用同一組資料比較 MSE vs. SNR（M = 10、15） |
 
 ### [DigitalCommunication/](DigitalCommunication/)
 
 | 檔案 | 說明 |
 |---|---|
-| `ASKFSK_wave.m` | ASK、FSK 的 bit stream 與調變波形 |
-| `QAM_8_wave.m` | 8-QAM 調變波形 |
-| `ASK_error.m` | ASK 經 matched filter 解調，在 bit 結束處取樣判決；比較兩種 T<sub>b</sub> 下的模擬 BER 與理論 Q 函數 |
-| `FSK_error.m` | FSK 經 matched filter 解調；比較兩種 T<sub>b</sub> 下的模擬 BER 與理論 Q 函數 |
-| `integrate_dump_receiver.m` | 積分傾卸接收機，用 10<sup>5</sup> 個 bit 模擬 antipodal 訊號，觀察 BER 隨 N<sub>0</sub>、振幅、T<sub>b</sub> 的變化 |
-| `QPSK_error.m` | QPSK：passband 波形 → correlator 取得 I/Q → 內積判決，SER 與理論比較 |
-| `QAM_16_error.m` | 16-QAM：passband 波形 → correlator 取得 I/Q → 最小距離判決，SER 與理論比較 |
-| `MPSK_constellation.m` | 8-PSK 在 AWGN 下的星座圖（改 `M` 可換成其他階數） |
-| `QAM_16_constellation.m` | 16-QAM 在 AWGN 下的星座圖 |
-| `QPSK_decision_region.m` | QPSK 的 MAP 決策區域（程式內含等機率與不等機率兩組事前機率，目前畫的是不等機率） |
-| `QAM_16_psd_Rtau.m` | 16-QAM PSD：先算自相關再做 FFT，與理論比較 |
-| `QAM_16_psd_Sf.m` | 16-QAM PSD：periodogram 平均，與理論比較 |
-| `eye_pattern.m` | 不同通道頻寬下的眼圖 |
-| `DSP_filterdesign_FIR.m` | 用 `filterDesigner` 設計的 FIR 濾波器，畫出振幅響應與 group delay，並印出 H(z) |
-| `DSP_filterdesign_IIR.m` | 用 `filterDesigner` 設計的 IIR 濾波器，畫出振幅響應與 group delay，並印出 H(z) |
+| [`ASKFSK_wave.m`](DigitalCommunication/ASKFSK_wave.m) | ASK、FSK 的 bit stream 與調變波形 |
+| [`QAM_8_wave.m`](DigitalCommunication/QAM_8_wave.m) | 8-QAM 調變波形 |
+| [`ASK_error.m`](DigitalCommunication/ASK_error.m) | ASK 經 matched filter 解調，在 bit 結束處取樣判決；比較兩種 T<sub>b</sub> 下的模擬 BER 與理論 Q 函數 |
+| [`FSK_error.m`](DigitalCommunication/FSK_error.m) | FSK 經 matched filter 解調；比較兩種 T<sub>b</sub> 下的模擬 BER 與理論 Q 函數 |
+| [`integrate_dump_receiver.m`](DigitalCommunication/integrate_dump_receiver.m) | 積分傾卸接收機，用 10<sup>5</sup> 個 bit 模擬 antipodal 訊號，觀察 BER 隨 N<sub>0</sub>、振幅、T<sub>b</sub> 的變化 |
+| [`QPSK_error.m`](DigitalCommunication/QPSK_error.m) | QPSK：passband 波形 → correlator 取得 I/Q → 內積判決，SER 與理論比較 |
+| [`QAM_16_error.m`](DigitalCommunication/QAM_16_error.m) | 16-QAM：passband 波形 → correlator 取得 I/Q → 最小距離判決，SER 與理論比較 |
+| [`MPSK_constellation.m`](DigitalCommunication/MPSK_constellation.m) | 8-PSK 在 AWGN 下的星座圖（改 `M` 可換成其他階數） |
+| [`QAM_16_constellation.m`](DigitalCommunication/QAM_16_constellation.m) | 16-QAM 在 AWGN 下的星座圖 |
+| [`QPSK_decision_region.m`](DigitalCommunication/QPSK_decision_region.m) | QPSK 的 MAP 決策區域（程式內含等機率與不等機率兩組事前機率，目前畫的是不等機率） |
+| [`QAM_16_psd_Rtau.m`](DigitalCommunication/QAM_16_psd_Rtau.m) | 16-QAM PSD：先算自相關再做 FFT，與理論比較 |
+| [`QAM_16_psd_Sf.m`](DigitalCommunication/QAM_16_psd_Sf.m) | 16-QAM PSD：periodogram 平均，與理論比較 |
+| [`eye_pattern.m`](DigitalCommunication/eye_pattern.m) | 不同通道頻寬下的眼圖 |
+| [`DSP_filterdesign_FIR.m`](DigitalCommunication/DSP_filterdesign_FIR.m) | 用 `filterDesigner` 設計的 FIR 濾波器，畫出振幅響應與 group delay，並印出 H(z) |
+| [`DSP_filterdesign_IIR.m`](DigitalCommunication/DSP_filterdesign_IIR.m) | 用 `filterDesigner` 設計的 IIR 濾波器，畫出振幅響應與 group delay，並印出 H(z) |
 
 </details>
