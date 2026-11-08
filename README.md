@@ -173,7 +173,7 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
 | [`QAM_8_wave.m`](DigitalCommunication/QAM_8_wave.m) | 8-QAM 調變波形 |
 | [`ASK_error.m`](DigitalCommunication/ASK_error.m) | ASK 經 matched filter 解調，在 bit 結束處取樣判決；比較兩種 T<sub>b</sub> 下的模擬 BER 與理論 Q 函數 |
 | [`FSK_error.m`](DigitalCommunication/FSK_error.m) | FSK 經 matched filter 解調；比較兩種 T<sub>b</sub> 下的模擬 BER 與理論 Q 函數 |
-| [`integrate_dump_receiver.m`](DigitalCommunication/integrate_dump_receiver.m) | 積分傾卸接收機，用 10<sup>5</sup> 個 bit 模擬 antipodal 訊號，觀察 BER 隨 N<sub>0</sub>、振幅、T<sub>b</sub> 的變化 |
+| [`integrate_dump_receiver.m`](DigitalCommunication/integrate_dump_receiver.m) | Integrate and dump receiver，用 10<sup>5</sup> 個 bit 模擬 antipodal 訊號，觀察 BER 隨 N<sub>0</sub>、振幅、T<sub>b</sub> 的變化 |
 | [`QPSK_error.m`](DigitalCommunication/QPSK_error.m) | QPSK：passband 波形 → correlator 取得 I/Q → 內積判決，SER 與理論比較 |
 | [`QAM_16_error.m`](DigitalCommunication/QAM_16_error.m) | 16-QAM：passband 波形 → correlator 取得 I/Q → 最小距離判決，SER 與理論比較 |
 | [`MPSK_constellation.m`](DigitalCommunication/MPSK_constellation.m) | 8-PSK 在 AWGN 下的星座圖（改 `M` 可換成其他階數） |
