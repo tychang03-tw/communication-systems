@@ -10,7 +10,7 @@
 
 以下挑選幾個具代表性的模擬結果，完整內容見最下方的[逐檔清單](#逐檔清單)。
 
-### 1. 行動通訊 — `MobileCommunication/`
+### 1. 行動通訊 — [`MobileCommunication/`](MobileCommunication/)
 
 #### 衰落通道下的 BPSK
 
@@ -32,7 +32,7 @@
   只有 LOS 時斜率為 −2（自由空間路徑損耗）；加入反射後出現多路徑造成的功率起伏，擬合斜率依序變為 −1.95、−1.83、−1.60
 </p>
 
-### 2. 下世代行動通訊 — `NexGenMobileCom/`
+### 2. 下世代行動通訊 — [`NexGenMobileCom/`](NexGenMobileCom/)
 
 #### ISI 通道
 
@@ -84,7 +84,7 @@
   天線數越多 MSE 越低；MUSIC 與 Root-MUSIC 幾乎重疊，ESPRIT 誤差較大但不需要角度掃描、計算量最小
 </p>
 
-### 3. 數位通訊 — `DigitalCommunication/`
+### 3. 數位通訊 — [`DigitalCommunication/`](DigitalCommunication/)
 
 #### MAP 決策區域
 
@@ -134,7 +134,7 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
 <details>
 <summary>展開所有檔案說明（包含上方沒有列出的練習）</summary>
 
-### MobileCommunication/
+### [MobileCommunication/](MobileCommunication/)
 
 | 檔案 | 說明 |
 |---|---|
@@ -142,7 +142,7 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
 | `BpskBer.m` | BPSK 在 AWGN、Rayleigh（三種寫法）、Rician 下的 BER |
 | `RayTracing.m` | 室內射線追蹤，LOS + 1～3 次反射，估計路徑損耗斜率 |
 
-### NexGenMobileCom/
+### [NexGenMobileCom/](NexGenMobileCom/)
 
 | 檔案 | 說明 |
 |---|---|
@@ -164,7 +164,7 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
 | `ESPRIT_MSE.m` | ESPRIT 的 MSE vs. SNR（M = 10、15） |
 | `DOA_compare_MSE.m` | MUSIC / Root-MUSIC / ESPRIT 用同一組資料比較 MSE vs. SNR（M = 10、15） |
 
-### DigitalCommunication/
+### [DigitalCommunication/](DigitalCommunication/)
 
 | 檔案 | 說明 |
 |---|---|
