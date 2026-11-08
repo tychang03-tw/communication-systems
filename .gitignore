@@ -1,0 +1,12 @@
+# MATLAB 自動備份檔
+*.asv
+*.m~
+
+# MATLAB 執行產生的暫存檔
+*.mex*
+slprj/
+
+# 作業系統產生的檔案
+Thumbs.db
+desktop.ini
+.DS_Store

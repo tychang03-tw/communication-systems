@@ -1,5 +1,5 @@
 % Rayleigh / Rician 分布
-% 由兩路高斯隨機變數產生 envelope，比較模擬 histogram 與理論 PDF
+% 由二路高斯隨機變數產生 envelope，比較模擬 histogram 與理論 PDF
 % 輸出：Rayleigh 理論 / 模擬、Rician 模擬，以及 Rician 理論與模擬比較
 clear
 clc

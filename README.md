@@ -12,7 +12,7 @@
 
 ### 1. 行動通訊 — [`MobileCommunication/`](MobileCommunication/)
 
-#### 衰減通道下的 BPSK
+#### 衰落通道下的 BPSK
 
 用三種方式產生 Rayleigh fading（`raylrnd`、二路高斯、circular symmetric complex Gaussian），並調整 LOS 權重模擬 Rician 通道，比較 BER。
 
@@ -71,12 +71,12 @@
 <p align="center">
   <img src="NexGenMobileCom/figures/Beam_pattern.jpg" width="550" alt="Delay-and-Sum / MMSE / MVDR 波束場型">
   <br>
-  目標訊號在 0°（藍色直線），3 個干擾在 −45°、−40°、38°（紅色直線）。三種方法對目標方向的增益都是 1；但 MVDR 和 MMSE 會在干擾方向把增益壓到接近 0 ，Delay-and-Sum 只對準目標方向、不會針對干擾調整，干擾仍會從旁瓣漏進來
+  目標訊號在 0°（藍色直線），3 個干擾在 −45°、−40°、38°（紅色直線）。三種方法對目標方向的增益都是 1；但 MVDR 和 MMSE 會在干擾方向把增益壓到接近 0，Delay-and-Sum 只對準目標方向、不會針對干擾調整，干擾仍會從旁瓣漏進來
 </p>
 
 #### DOA 估計
 
-用 ULA 估計 4 個訊號源的方向，以同一組資料比較 Standard MUSIC (Pesudo Spectrum)、Root-MUSIC（多項式求根）、ESPRIT（rotational invariance）在不同天線數下的 MSE。
+用 ULA 估計 4 個訊號源的方向，以同一組資料比較 Standard MUSIC（pseudo-spectrum）、Root-MUSIC（多項式求根）、ESPRIT（rotational invariance）在不同天線數下的 MSE。
 
 <p align="center">
   <img src="NexGenMobileCom/figures/DOA.jpg" width="550" alt="MUSIC / Root-MUSIC / ESPRIT MSE 比較">
@@ -126,6 +126,7 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
   - Statistics and Machine Learning Toolbox（`raylrnd`、`raylpdf`、`normrnd`）
 - 每個 `.m` 都是可以獨立執行的 script，彼此沒有相依，打開後直接 Run 就會畫出結果圖。
 - 有些 Monte Carlo 模擬（DOA MSE、MIMO、波束成形 MSE、16-QAM PSD）迴圈次數比較多，執行需要一點時間。
+- 每次模擬的資料、雜訊與通道皆為隨機產生，結果曲線會略有差異；高 SNR 區段的錯誤數較少，曲線尾端可能出現起伏。
 
 ---
 
@@ -138,7 +139,7 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
 
 | 檔案 | 說明 |
 |---|---|
-| [`Rayleigh_Rician_pdf.m`](MobileCommunication/Rayleigh_Rician_pdf.m) | 由兩路高斯隨機變數產生 envelope，比較 Rayleigh / Rician 的模擬 histogram 與理論 PDF |
+| [`Rayleigh_Rician_pdf.m`](MobileCommunication/Rayleigh_Rician_pdf.m) | 由二路高斯隨機變數產生 envelope，比較 Rayleigh / Rician 的模擬 histogram 與理論 PDF |
 | [`BpskBer.m`](MobileCommunication/BpskBer.m) | BPSK 在 AWGN、Rayleigh（三種寫法）、Rician 下的 BER |
 | [`RayTracing.m`](MobileCommunication/RayTracing.m) | 室內射線追蹤，LOS + 1～3 次反射，估計路徑損耗斜率 |
 
@@ -185,3 +186,10 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
 | [`DSP_filterdesign_IIR.m`](DigitalCommunication/DSP_filterdesign_IIR.m) | 用 `filterDesigner` 設計的 IIR 濾波器，畫出振幅響應與 group delay，並印出 H(z) |
 
 </details>
+
+
+---
+
+## 作者
+
+- 張茲逸｜長庚大學 電機工程學系

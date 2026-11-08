@@ -1,5 +1,5 @@
 % 衰落通道下的 BPSK 錯誤率
-% Rayleigh fading 用三種方式產生（raylrnd、兩路高斯、circular symmetric complex Gaussian），另以 LOS 權重 a 模擬 Rician 通道
+% Rayleigh fading 用三種方式產生（raylrnd、二路高斯、circular symmetric complex Gaussian），另以 LOS 權重 a 模擬 Rician 通道
 % 輸出：AWGN 理論值與各通道的 BER vs. Eb/N0
 clear
 clc
