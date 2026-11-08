@@ -61,7 +61,7 @@
 <p align="center">
   <img src="NexGenMobileCom/figures/Spatial_modulation.jpg" width="550" alt="ZF / MMSE / V-BLAST / 空間調變 BER 比較">
   <br>
-  MMSE 因為考慮雜訊而比 ZF 好；V-BLAST 逐層消除已解出的訊號，在中高 SNR 明顯優於線性偵測
+  ZF 直接反轉通道，會放大雜訊；MMSE 把雜訊也納入考量，所以略優於 ZF。V-BLAST 每次先解出最可靠的一路，再從接收訊號中扣掉，後面幾路受到的干擾越來越少，在中高 SNR 明顯優於前兩者；空間調變一次只啟用一根天線，沒有天線間干擾，表現與 V-BLAST 相近
 </p>
 
 #### 接收端波束成形
