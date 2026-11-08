@@ -8,13 +8,13 @@
 
 ## 課程內容
 
-以下挑選幾個具代表性的模擬結果，完整內容見最下方的[逐檔清單](#逐檔清單)。
+以下挑選幾個模擬結果用於參考，完整內容見最下方的[逐檔清單](#逐檔清單)。
 
 ### 1. 行動通訊 — [`MobileCommunication/`](MobileCommunication/)
 
-#### 衰落通道下的 BPSK
+#### 衰減通道下的 BPSK
 
-用三種方式產生 Rayleigh fading（`raylrnd`、兩路高斯、circular symmetric complex Gaussian），並調整 LOS 權重模擬 Rician 通道，比較 BER。
+用三種方式產生 Rayleigh fading（`raylrnd`、二路高斯、circular symmetric complex Gaussian），並調整 LOS 權重模擬 Rician 通道，比較 BER。
 
 <p align="center">
   <img src="MobileCommunication/figures/BPSK_small_scale_fading_channel.jpg" width="550" alt="BPSK 在衰落通道下的 BER">
@@ -24,7 +24,7 @@
 
 #### 射線追蹤
 
-50 m × 50 m 室內環境，用 image method 計算 LOS 加上 1～3 次牆面反射的接收功率，再用線性擬合估計路徑損耗指數。
+50 m × 50 m 室內環境，用 image method 計算 LOS 加上 1～3 次牆面反射的接收功率，再用線性擬合估計路徑損耗斜率。
 
 <p align="center">
   <img src="MobileCommunication/figures/raytracing.jpg" width="800" alt="射線追蹤：接收功率與路徑損耗斜率">
@@ -56,7 +56,7 @@
 
 #### MIMO 偵測
 
-5×8 空間多工下比較 ZF、MMSE、V-BLAST（ordered SIC）的 BER，另外實作 4×8 空間調變（2 bit 選天線 + 3 bit 8PSK）。
+5×8 空間多工下比較 ZF、MMSE、V-BLAST 與 4×8 空間調變（2 bit 選天線 + 3 bit 8PSK）的 BER。
 
 <p align="center">
   <img src="NexGenMobileCom/figures/Spatial_modulation.jpg" width="550" alt="ZF / MMSE / V-BLAST / 空間調變 BER 比較">
@@ -66,17 +66,17 @@
 
 #### 接收端波束成形
 
-20 根天線的 ULA，1 個目標訊號加 3 個干擾，比較 Delay-and-Sum、MMSE、MVDR 的波束場型；高 SNR 時用訊號子空間處理 ill-conditioned 共變異矩陣。
+20 根天線的 ULA，1 個目標訊號加 3 個干擾，比較 Delay-and-Sum、MMSE、MVDR 的波束場型。
 
 <p align="center">
   <img src="NexGenMobileCom/figures/Beam_pattern.jpg" width="550" alt="Delay-and-Sum / MMSE / MVDR 波束場型">
   <br>
-  目標在 0°（藍線），干擾在 −45°、−40°、38°（紅線）；MVDR 和 MMSE 會在干擾方向形成深 null，Delay-and-Sum 則不會針對干擾調整
+  目標訊號在 0°（藍色直線），3 個干擾在 −45°、−40°、38°（紅色直線）。三種方法對目標方向的增益都是 1；但 MVDR 和 MMSE 會在干擾方向把增益壓到接近 0 ，Delay-and-Sum 只對準目標方向、不會針對干擾調整，干擾仍會從旁瓣漏進來
 </p>
 
 #### DOA 估計
 
-用 ULA 估計 4 個訊號源的方向，以同一組資料比較 MUSIC、Root-MUSIC（多項式求根）、ESPRIT（rotational invariance）在不同天線數下的 MSE。
+用 ULA 估計 4 個訊號源的方向，以同一組資料比較 Standard MUSIC (Pesudo Spectrum)、Root-MUSIC（多項式求根）、ESPRIT（rotational invariance）在不同天線數下的 MSE。
 
 <p align="center">
   <img src="NexGenMobileCom/figures/DOA.jpg" width="550" alt="MUSIC / Root-MUSIC / ESPRIT MSE 比較">
