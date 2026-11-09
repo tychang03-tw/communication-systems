@@ -1,4 +1,4 @@
-% 積分傾卸接收機（integrate-and-dump receiver）
+% integrate-and-dump receiver
 % 用 10^5 個 bit 模擬 antipodal 訊號，比較振幅 20 / 30 mV 與 T_b = 1 / 0.1 ms 下的 BER 與理論值
 % 輸出：BER vs. 雜訊功率頻譜密度 N0
 clear
