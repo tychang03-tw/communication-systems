@@ -1,6 +1,6 @@
 # 通訊系統模擬
 
-修習**行動通訊**、**下世代行動通訊**、**數位通訊**三門課程期間的 MATLAB 模擬練習。
+**行動通訊**、**下世代行動通訊**、**數位通訊**三門課程期間的 MATLAB 模擬練習。
 
 **關鍵字**：Rayleigh / Rician 衰落 · Ray tracing · DFE · OFDM · MIMO（Alamouti、ZF、MMSE、V-BLAST、空間調變）· 波束成形（MVDR / MMSE）· DOA 估計（MUSIC、Root-MUSIC、ESPRIT）· 數位調變（ASK / FSK / PSK / QAM）· Matched filter · BER / SER 理論與模擬比較 · PSD · 眼圖 · FIR / IIR
 
@@ -51,7 +51,7 @@
 <p align="center">
   <img src="NexGenMobileCom/figures/MIMO.jpg" width="550" alt="SISO / MISO / SIMO / Alamouti BER 比較">
   <br>
-  多天線的 BER 斜率明顯比 SISO 陡；Alamouti 不需要傳送端知道通道，代價是和 MISO / SIMO 相比約差 3 dB
+  多天線的 BER 斜率明顯比 SISO 陡；Alamouti 不需要傳送端已知通道，代價是和 MISO / SIMO 相比約差 3 dB
 </p>
 
 #### MIMO 偵測
@@ -192,4 +192,4 @@ NRZ 訊號通過不同頻寬 W 的理想低通通道，重疊 100 組隨機序�
 
 ## 作者
 
-- 張茲逸｜長庚大學 電機工程學系
+- 張茲逸｜中興大學 電機工程研究所
